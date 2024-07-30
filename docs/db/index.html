@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="http://dev.fawncalc.ydduj.org/fawncalc.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+</head>
+<body>
+
+<h2>The schema looks something like:</h2>
+<br>
+<li>dbname</li>
+<li>diskNcost</li>
+<li>diskNgb</li>
+<li>diskNname</li>
+<li>evalcomment</li>
+<li>kaseNamps</li>
+<li>kaseNcost</li>
+<li>kaseNctype</li>
+<li>kaseNide</li>
+<li>kaseNname</li>
+<li>kaseNrtype</li>
+<li>kaseNu</li>
+<li>memNcost</li>
+<li>memNgbs</li>
+<li>memNmb</li>
+<li>memNmtype</li>
+<li>memNname</li>
+<li>memNNcost</li>
+<li>memNNgbs</li>
+<li>memNNmb</li>
+<li>memNNmtype</li>
+<li>memNNname</li>
+<li>momNcost</li>
+<li>momNctype</li>
+<li>momNide</li>
+<li>momNmem</li>
+<li>momNmtype</li>
+<li>momNname</li>
+<li>momNn</li>
+<li>momNpci</li>
+<li>momNptype</li>
+<li>momNpxe</li>
+<li>nicNcost</li>
+<li>nicNmbs</li>
+<li>nicNname</li>
+<li>nicNntype</li>
+<li>nicNus</li>
+<li>oeval</li>
+<li>oread</li>
+<li>procNcost</li>
+<li>procNgflops</li>
+<li>procNname</li>
+<li>procNNcost</li>
+<li>procNNgflops</li>
+<li>procNNname</li>
+<li>procNNptype</li>
+<li>procNptype</li>
+<li>rackNcost</li>
+<li>rackNfloor</li>
+<li>rackNname</li>
+<li>rackNrtype</li>
+<li>rackNu</li>
+<li>swNamps</li>
+<li>swNcost</li>
+<li>swNmbs</li>
+<li>swNname</li>
+<li>swNntype</li>
+<li>swNports</li>
+<li>swNu</li>
+<li>swNus</li>
+<li>viewcomment</li>
+<hr>
+<h2>Making it orderly in vi: </h2>
+<pre> :%s/&/[CTRL-V]+M/g</pre>
+<hr>
+<h2>Parsing out the 'schema' as it were:</h2>
+<pre> cat db0.cgtxt | tr '0-9' N | sort -u | cut -f1 -d= | uniq | grep -v Pric | grep -v Acc</pre>
+</body>
+</html>

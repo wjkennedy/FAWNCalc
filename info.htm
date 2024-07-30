@@ -1,0 +1,192 @@
+<TD><INPUT TYPE="TEXT" NAME=""name"" "  
+VALUE="%s"></TD>, index, value
+<TD><INPUT TYPE="TEXT" SIZE="4" NAME=""name"" "  
+VALUE="%s"></TD>, index, value
+<TD><INPUT TYPE="TEXT" NAME=""name"" "  
+VALUE="%g"></TD>, index, value
+<TD><INPUT TYPE="TEXT" NAME=""name"" "  
+VALUE="%d"></TD>, index, value
+<TD><INPUT TYPE="TEXT" SIZE="4" NAME=""name"" "  
+VALUE="%d"></TD>, index, value
+<TD><INPUT TYPE="TEXT" NAME=""name"" " 
+VALUE="%s"></TD>, index, value ? "Y" : "N"
+<TD><SELECT NAME=""NAME"">, bundle 
+<OPTION %s VALUE="%d">%s, 
+</SELECT></TD> 
+<head>
+<title>CDR Costs &AMP; Internal Parameters</title>
+</head>
+<body>
+<p>
+<H1>Costs &AMP; Internal Parameters</H2>
+<P>
+<P>
+<p>
+<FORM METHOD="POST" ACTION=""CDR_EXEC"">
+<INPUT TYPE="HIDDEN" NAME="version" VALUE="%d">
+<INPUT TYPE="HIDDEN" NAME="paramset" VALUE="%d">
+<INPUT TYPE="HIDDEN" NAME="email" VALUE="%s">
+<INPUT TYPE="HIDDEN" NAME="password" VALUE="%s">
+<P>
+The full set of cost and <EM>internal</EM> parameters used 
+<P>
+<INPUT TYPE="TEXT" NAME="dbname" VALUE="%s" MAXLENGTH=400>
+<br>"
+<INPUT TYPE="CHECKBOX" NAME="oeval" VALUE=1 %s>
+Allow others to evalute designs based on this database<br>
+<INPUT TYPE="CHECKBOX" NAME="oread" VALUE=1 %s>
+Allow others to view parameters used in this database<br>,
+<P>nEnter comments you would like displayed when a user
+       "<P>
+       "<TEXTAREA ROWS="4" COLS="60" NAME="evalcomment">"
+       "</TEXTAREA>"
+       "<P>
+       "<P>nEnter comments you would like displayed when a user
+       "<P>
+       "<TEXTAREA ROWS="4" COLS="60" NAME="viewcomment">"
+       "</TEXTAREA>,
+<P><HR><P>
+<INPUT TYPE="SUBMIT" VALUE="Save Changes" NAME="set_params">
+<INPUT TYPE=RESET VALUE="Reset Form">
+</FORM>
+<p>
+<HR>
+<A HREF="http://aggregate.org/">
+</A> Cluster Supercomputer Design Rules
+</BODY>
+</HTML>
+<H3>NICs (PCI bus network interface cards</H3>
+<TABLE BORDER>
+<TR>
+<TH ALIGN=LEFT>Name</TH>
+<TH ALIGN=LEFT>Network Type</TH>
+<TH ALIGN=LEFT>Bandwidth (Mb/s</TH>
+<TH ALIGN=LEFT>Latency (us</TH>
+<TH ALIGN=LEFT>Cost</TH>
+</TR>
+</TR>
+</TABLE>
+<P>
+<H3>Network Cables</H3>
+<TABLE BORDER>
+<TR>
+<TH ALIGN=LEFT>Name</TH>
+<TH ALIGN=LEFT>Network Type</TH>
+<TH ALIGN=LEFT>Length (feet</TH>
+<TH ALIGN=LEFT>Cost</TH>
+</TR>
+</TABLE>
+<P>
+<H3>Switches (network switches</H3>
+<TABLE BORDER>
+<TR>
+<TH ALIGN=LEFT>Name</TH>
+<TH ALIGN=LEFT>Network Type</TH>
+<TH ALIGN=LEFT>Total Bandwidth (Mb/s</TH>
+<TH ALIGN=LEFT>Latency (us</TH>
+<TH ALIGN=LEFT># Ports</TH>
+<TH ALIGN=LEFT>Cost</TH>
+<TH ALIGN=LEFT>Size (in U</TH>
+<TH ALIGN=LEFT>Power (in Amps</TH>
+</TR>
+</TABLE>
+<P>
+<H3>Processors</H3>
+<TABLE BORDER>
+<TR>
+<TH ALIGN=LEFT>Name</TH>
+<TH ALIGN=LEFT>Processor Type</TH>
+<TH ALIGN=LEFT>GFLOPS</TH>
+<TH ALIGN=LEFT>Cost</TH>
+</TR>
+</TABLE>
+<P>
+<H3>Motherboards</H3>
+<TABLE BORDER>
+<TR>
+<TH ALIGN=LEFT>Name</TH>
+<TH ALIGN=LEFT>Processor Type</TH>
+<TH ALIGN=LEFT>Memory Type</TH>
+<TH ALIGN=LEFT>Case Type</TH>
+<TH ALIGN=LEFT># Processor Sockets</TH>
+<TH ALIGN=LEFT># Memory Slots</TH>
+<TH ALIGN=LEFT># PCI Slots</TH>
+<TH ALIGN=LEFT># IDE Drives</TH>
+<TH ALIGN=LEFT>Has PXE</TH>
+<TH ALIGN=LEFT>Cost</TH>
+</TR>
+</TABLE>
+<P>
+<H3>Memory Parts</H3>
+<TABLE BORDER>
+<TR>
+<TH ALIGN=LEFT>Name</TH>
+<TH ALIGN=LEFT>Memory Type</TH>
+<TH ALIGN=LEFT>Size (in MB</TH>
+<TH ALIGN=LEFT>Bandwidth (in GB/s</TH>
+<TH ALIGN=LEFT>Cost</TH>
+</TR>
+</TABLE>
+<P>
+<H3>Disk Drives (or other netboot devices</H3>
+<TABLE BORDER>
+<TR>
+<TH ALIGN=LEFT>Name</TH>
+<TH ALIGN=LEFT>Size (in GB</TH>
+<TH ALIGN=LEFT>Cost</TH>
+</TR>
+</TABLE>
+<P>
+<H3>Cases (stand-alone or rack mount</H3>
+<TABLE BORDER>
+<TR>
+<TH ALIGN=LEFT>Name</TH>
+<TH ALIGN=LEFT>Case Type</TH>
+<TH ALIGN=LEFT>Rack Type</TH>
+<TH ALIGN=LEFT># IDE Drives</TH>
+<TH ALIGN=LEFT>Cost</TH>
+<TH ALIGN=LEFT>Size (in U</TH>
+<TH ALIGN=LEFT>Power (in Amps</TH>
+</TR>
+</TABLE>
+<P>
+<H3>Racks (shelving units or rack cabinets</H3>
+<TABLE BORDER>
+<TR>
+<TH ALIGN=LEFT>Name</TH>
+<TH ALIGN=LEFT>Rack Type</TH>
+<TH ALIGN=LEFT>Cost</TH>
+<TH ALIGN=LEFT>Size (in U</TH>
+<TH ALIGN=LEFT>Floorspace (in 2x2'</TH>
+</TR>
+</TABLE>
+<P>
+<H3>Bundles</H3>
+<P>Often components are available in bundles.  For 
+<P>To add a bundle to the database, enter a bundle name
+<P>
+<TABLE BORDER>
+<TR>
+<TH ALIGN=LEFT>Name</TH>
+<TH ALIGN=LEFT>NIC</TH>
+<TH ALIGN=LEFT>Qty.</TH>
+<TH ALIGN=LEFT>Network Cables</TH>
+<TH ALIGN=LEFT>Qty.</TH>
+<TH ALIGN=LEFT>Switches</TH>
+<TH ALIGN=LEFT>Qty.</TH>
+<TH ALIGN=LEFT>Processors</TH>
+<TH ALIGN=LEFT>Qty.</TH>
+<TH ALIGN=LEFT>Motherboards</TH>
+<TH ALIGN=LEFT>Qty.</TH>
+<TH ALIGN=LEFT>Memory</TH>
+<TH ALIGN=LEFT>Qty.</TH>
+<TH ALIGN=LEFT>Disks</TH>
+<TH ALIGN=LEFT>Qty.</TH>
+<TH ALIGN=LEFT>Cases</TH>
+<TH ALIGN=LEFT>Qty.</TH>
+<TH ALIGN=LEFT>Racks</TH>
+<TH ALIGN=LEFT>Qty.</TH>
+<TH ALIGN=LEFT>Bundle Cost</TH>
+</TR>
+</TABLE>
+<P>
